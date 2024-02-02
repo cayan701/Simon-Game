@@ -64,6 +64,7 @@ function checkAns(idx) {
         }
     } else {
         h2.innterText = `Game Over!: Try again by pressing any key.${level}`;
+        reset();
     }
 }
 
@@ -84,4 +85,11 @@ let allBtns = document.querySelector('.btn');
 
 for(btn of allBtns) {
     btn.addEventListener('click', btnPress);
+}
+
+function reset() {
+    started = false;
+    gameSeq = [];
+    userSeq = [];
+    level = 0;
 }
